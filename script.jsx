@@ -1,7 +1,5 @@
 #include json2.js
 
-
-
 (function main() {
 
 var lessons = loadJson('lessons.json');

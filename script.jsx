@@ -16,9 +16,9 @@ for ( var i = 0; i < lessons.length; i++) {
 function processlesson(lesson) {
 	var doc = app.activeDocument;
 
-	// var titleGroup = doc.layerSets.getByName('title');
-	// var titleLayer = titleGroup.layers[0];
-	// titleLayer.textItem.contents = lesson.title;
+	 var titleGroup = doc.layerSets.getByName('title');
+	 var titleLayer = titleGroup.layers[0];
+	 titleLayer.textItem.contents = lesson.title;
 
 	var todoGroup = doc.layerSets.getByName('todo');
 
@@ -27,10 +27,8 @@ function processlesson(lesson) {
 		layer.textItem.contents = lesson.todo[i];
 	}
 
-	// titleGroup.visible = false;
 	todoGroup.visible = false;
 
-	// saveGroup(titleGroup, lesson.id + '-title');
 	saveGroup(todoGroup, lesson.id);
 }
 function saveGroup(group, name) {
